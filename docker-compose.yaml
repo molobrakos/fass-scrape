@@ -1,0 +1,13 @@
+version: "2"
+services:
+  scraper:
+    build:
+      context: .
+    restart: "no"
+    volumes:
+      - scraper-cache:/scrapy/.scrapy
+      - ./scrapy.log:/scrapy/scrapy.log
+
+volumes:
+  scraper-cache:
+
